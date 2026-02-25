@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Navigator | Каталог нейросетей</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <!-- ===== ФИКСИРОВАННАЯ ПАНЕЛЬ УПРАВЛЕНИЯ ===== -->
+    <div class="top-navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#">
+                    <span class="logo-icon">🤖</span>
+                    <span class="logo-text">AI Navigator</span>
+                    <span class="logo-badge">beta</span>
+                </a>
+            </div>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#chat" class="nav-link" onclick="smoothScroll('#chat')">Чат-боты</a>
+                <a href="#image" class="nav-link" onclick="smoothScroll('#image')">Изображения</a>
+                <a href="#video" class="nav-link" onclick="smoothScroll('#video')">Видео/Аудио</a>
+                <a href="#dev" class="nav-link" onclick="smoothScroll('#dev')">Разработка</a>
+                <a href="#materials" class="nav-link" onclick="smoothScroll('#materials')">Обучение</a>
+                
+            </div>
+            
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" title="Тема">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Меню">☰</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Отступ, чтобы контент не прятался под панелью -->
+    <div class="navbar-spacer"></div>
+
+    <div class="container">
+        <!-- Анимация иконок в стиле Midjourney -->
+        <!-- Анимация иконок AI-инструментов в стиле Midjourney -->
+<div class="hero-animation">
+    <div class="floating-icons">
+        <!-- Первая группа - движется слева направо (Чат-боты) -->
+        <div class="icon-group icon-group-1">
+            <a href="https://chat.openai.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #10a37f;" title="ChatGPT">
+                <img src="https://img.icons8.com/fluency/48/chatgpt.png" alt="ChatGPT">
+            </a>
+
+            <a href="https://claude.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #6b46c1;" title="Claude">
+                <img src="https://img.icons8.com/fluency/48/claude-ai.png" alt="Claude">
+            </a>
+             <a href="https://gemini.google.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;" title="Gemini">
+                <img src="https://s.yimg.com/ny/api/res/1.2/FWWVOW6s2MUFV_yLq9E36g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://s.yimg.com/os/creatr-uploaded-images/2023-12/5f7be670-943f-11ee-af7f-41b7060d20ba" alt="Gemini">
+            </a>
+            <a href="https://gemini.google.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;" title="Bard">
+                <img src="https://img.icons8.com/fluency/48/bard.png" alt="Bard">
+            </a>
+           
+            <a href="https://www.perplexity.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;" title="Perplexity">
+                <img src="https://img.icons8.com/fluency/48/perplexity-ai.png" alt="Perplexity">
+            </a>
+             <a href="https://mistral.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00a67e;" title="Mistral">
+                <img src="https://www.gizmochina.com/wp-content/uploads/2024/03/Mistral-AI.png" alt="Mistral">
+            </a>
+            <a href="https://character.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #8c52ff;" title="Character.ai">
+                <img src="https://i.ytimg.com/vi/Sfj2zCwg0LA/maxresdefault.jpg" alt="Character.ai">
+            </a>
+            <a href="https://pi.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00bcd4;" title="Pi AI">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/69/09/c7/6909c705-2ee7-45a3-4672-e8bc35105d2b/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg" alt="Pi AI">
+            </a>
+            <a href="https://you.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ffb347;" title="You.com">
+                <img src="https://digiseller.mycdn.ink/imgwebp.ashx?idp=6339891&amp;dc=645926400&amp;w=400" alt="You.com">
+            </a>
+            
+            
+            <a href="https://www.deepseek.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00c853;" title="DeepSeek">
+                <img src="https://img.icons8.com/fluency/48/deepseek.png" alt="DeepSeek">
+            </a>
+        </div>
+        
+        <!-- Вторая группа - движется справа налево (Генерация изображений) -->
+        <div class="icon-group icon-group-2">
+            <a href="https://www.midjourney.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00a67e;" title="Midjourney">
+                <img src="https://img.icons8.com/fluency/48/midjourney.png" alt="Midjourney">
+            </a>
+             <a href="https://openai.com/dall-e-3" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #10a37f;" title="DALL-E 3">
+                <img src="https://lindeal.com/ld/images/2024/07/22/top-15-ai-servisov-nejrosetej-dlya-raboty-i-biznesa-dall-e-sozdanie-izobrazhenij-na-osnove-tekstovykh-opisanij.png" alt="DALL-E 3">
+            </a>
+            <a href="https://stability.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #6b46c1;" title="Stable Diffusion">
+                <img src="https://irecommend.ru/sites/default/files/product-images/359145/SfrqXMFA91QIS1BOlqbdrA.jpg" alt="Stable Diffusion">
+            </a>
+            <a href="https://www.sberbank.com/promo/kandinsky/" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;" title="Kandinsky">
+                <img src="https://static.tildacdn.com/tild3263-6437-4734-b935-383662656163/b8ebc3af501fb8d874d8.jpg" alt="Kandinsky">
+            </a>
+            <a href="https://leonardo.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;" title="Leonardo AI">
+                <img src="https://cdn.sanity.io/images/pf53b1i4/production/783a60806d7e2218d50e3d394e4861efd07b5965-2940x1626.webp?w=1600&amp;q=85&amp;fit=crop&amp;auto=format" alt="Leonardo AI">
+            </a>
+
+            <a href="https://ideogram.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ffb347;" title="Ideogram">
+                <img src="https://yt3.googleusercontent.com/xMkqPWSRwXXPQEe1ChOCQ-BWDwtLUQFAnj4vdy-2EJngfjGMO6QopIdwKm1rZs3lHNExncrBCA=s900-c-k-c0x00ffffff-no-rj" alt="Ideogram">
+            </a>
+             <a href="https://imagen.research.google" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #8c52ff;" title="Imagen">
+                <img src="https://yt3.googleusercontent.com/i4KxBUVdTgiKDdfzT2w8JV4_uEuReShqpbbIJnioEj8hwZfHm3xLM1QCmAx4I08hUk-KAWpa2g=s900-c-k-c0x00ffffff-no-rj" alt="Imagen">
+            </a>
+            
+            <a href="https://playgroundai.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00c853;" title="Playground AI">
+                <img src="https://avatars.mds.yandex.net/i?id=ee09b1bcdccc58fdd1ad4d0aca2f6ff4_l-5685421-images-thumbs&n=13" alt="Playground AI">
+            </a>
+            <a href="https://www.craiyon.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;" title="Craiyon">
+                <img src="https://cdn.techjockey.com/web/assets/images/techjockey/products/22756_craiyonlogo.jpg" alt="Craiyon">
+            </a>
+            
+        </div>
+        
+        <!-- Третья группа - движется слева направо (Видео/аудио) -->
+        <div class="icon-group icon-group-3">
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;">
+                <img src="https://img.ggsel.net/5432283/original/AUTOxAUTO/9237927_imgwebp.webp" alt="Runway" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00a67e;">
+                <img src="https://cdn.gabb.com/wp-content/uploads/2024/07/AI-spoke-articles-hub-1-1.png" alt="Suno AI" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;">
+                <img src="https://img.icons8.com/fluency/48/elevenlabs.png" alt="ElevenLabs" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #6b46c1;">
+                <img src="https://img.icons8.com/fluency/48/heygen.png" alt="HeyGen" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00bcd4;">
+                <img src="https://digiseller.mycdn.ink/imgwebp.ashx?idp=8624896&dc=802444393&w=576" alt="Pika" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ffb347;">
+                <img src="https://yt3.googleusercontent.com/KFCW9hzAjaas9PSd7AwCJrwcJg-eh5VOxIUcHM3WnIDtCHE2Wnas6AU6niX30rl5qvrdMmVWfg=s900-c-k-c0x00ffffff-no-rj" alt="CapCut" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #8c52ff;">
+                <img src="https://avatars.mds.yandex.net/i?id=21318330d5594b3376fc4e2951c1ec5d_sr-9070589-images-thumbs&n=13" alt="Rask.ai" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00c853;">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_nC9FfNKWJP-G0E-JyvSNIkNQ-ttaRAq2eIIchcZQNd3g=s900-c-k-c0x00ffffff-no-rj" alt="Descript" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;">
+                <img src="https://avatars.mds.yandex.net/i?id=2f8848e853df3952cbaafd8b9d42c6bea012f4f9-5192219-images-thumbs&n=13" alt="Murf AI" style="width: 40px; height: 40px;">
+            </div>
+            <div class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;">
+                <img src="https://avatars.mds.yandex.net/i?id=624643d7a93c846caeb0bf20466b7d22354f3167-5352587-images-thumbs&n=13" alt="WellSaid" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+        
+        <!-- Четвертая группа - движется справа налево (Инструменты и обучение) -->
+        <div class="icon-group icon-group-4">
+            <a href="https://huggingface.co" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00a67e;" title="Hugging Face">
+                <img src="https://i.ytimg.com/vi/wkD1lz3fEWM/maxresdefault.jpg" alt="Hugging Face">
+            </a>
+            
+            <a href="https://github.com/features/copilot" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #6b46c1;" title="GitHub Copilot">
+                <img src="https://img.icons8.com/fluency/48/github-copilot.png" alt="GitHub Copilot">
+            </a>
+            <a href="https://cursor.sh" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;" title="Cursor">
+                <img src="https://img.icons8.com/fluency/48/cursor.png" alt="Cursor">
+            </a>
+            <a href="https://replit.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;" title="Replit">
+                <img src="https://img.icons8.com/fluency/48/replit.png" alt="Replit">
+            </a>
+            <a href="https://www.notion.so/product/ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00bcd4;" title="Notion AI">
+                <img src="https://img.icons8.com/fluency/48/notion.png" alt="Notion AI">
+            </a>
+            <a href="https://www.grammarly.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ffb347;" title="Grammarly">
+                <img src="https://img.icons8.com/fluency/48/grammarly.png" alt="Grammarly">
+            </a>
+            <a href="https://www.jasper.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #8c52ff;" title="Jasper">
+                <img src="https://avatars.mds.yandex.net/i?id=f3d4fea89dae74c16ce3270665ed78f8_l-9182431-images-thumbs&n=13"" alt="Jasper">
+            </a>
+            
+            <a href="https://writesonic.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #00c853;" title="Writesonic">
+                <img src="https://img.icons8.com/fluency/48/writesonic.png" alt="Writesonic">
+            </a>
+            <a href="https://www.copy.ai" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #ff6b6b;" title="Copy.ai">
+                <img src="https://img.icons8.com/fluency/48/copy-ai.png" alt="Copy.ai">
+            </a>
+            <a href="https://quillbot.com" target="_blank" class="floating-icon" style="background: rgba(0, 0, 0, 0.8); border-color: #4285f4;" title="Quillbot">
+                <img src="https://librum.io/wp-content/uploads/2024/06/quillbot.jpg" alt="Quillbot">
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+        <!-- Шапка -->
+        <header class="header">
+            <h1>
+                AI Navigator
+                <span>beta</span>
+            </h1>
+            <p>Каталог профессиональных AI-инструментов для работы и творчества. Только проверенные решения.</p>
+        </header>
+
+        <!-- Поиск -->
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск по названию или описанию..." onkeyup="searchResources()">
+            </div>
+        </div>
+
+        <!-- ===== БЫСТРЫЕ ФИЛЬТРЫ ===== -->
+        <div class="quick-filters">
+            <div class="filters-header">
+                <h3>⚡ Быстрые фильтры</h3>
+                <span class="clear-filters" onclick="clearFilters()">Сбросить все</span>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-title">💰 По цене:</div>
+                <div class="filter-options">
+                    <span class="filter-tag" onclick="filterByPrice('free')">🆓 Бесплатно</span>
+                    <span class="filter-tag" onclick="filterByPrice('freemium')">🎁 Есть бесплатно</span>
+                    <span class="filter-tag" onclick="filterByPrice('paid')">💎 Только платно</span>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-title">🌍 По языку:</div>
+                <div class="filter-options">
+                    <span class="filter-tag" onclick="filterByLang('ru')">🇷🇺 Русский</span>
+                    <span class="filter-tag" onclick="filterByLang('en')">🇬🇧 Английский</span>
+                    <span class="filter-tag" onclick="filterByLang('multi')">🌐 Мультиязычный</span>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-title">🔧 По типу доступа:</div>
+                <div class="filter-options">
+                    <span class="filter-tag" onclick="filterByAccess('web')">🌐 Веб-версия</span>
+                    <span class="filter-tag" onclick="filterByAccess('api')">⚙️ Есть API</span>
+                    <span class="filter-tag" onclick="filterByAccess('local')">💻 Локально</span>
+                    <span class="filter-tag" onclick="filterByAccess('mobile')">📱 Мобильное</span>
+                </div>
+            </div>
+            
+            <div class="active-filters" id="activeFilters" style="display: none;">
+                <span>Активные фильтры:</span>
+                <div class="active-filter-tags" id="activeFilterTags"></div>
+            </div>
+        </div>
+
+        <!-- Категории -->
+        <div class="categories-grid">
+            <div class="category-card" onclick="filterCategory('chat')">
+                <div class="category-icon">💬</div>
+                <div class="category-title">Чат-боты</div>
+                <div class="category-count">25+ инструментов</div>
+            </div>
+            <div class="category-card" onclick="filterCategory('image')">
+                <div class="category-icon">🎨</div>
+                <div class="category-title">Изображения</div>
+                <div class="category-count">25+ генераторов</div>
+            </div>
+            <div class="category-card" onclick="filterCategory('video')">
+                <div class="category-icon">🎥</div>
+                <div class="category-title">Видео и аудио</div>
+                <div class="category-count">20+ инструментов</div>
+            </div>
+            <div class="category-card" onclick="filterCategory('dev')">
+                <div class="category-icon">🎥</div>
+                <div class="category-title">Для разработчиков</div>
+                <div class="category-count">15+ инструментов</div>
+            </div>
+            <div class="category-card" onclick="filterCategory('materials')">
+                <div class="category-icon">📚</div>
+                <div class="category-title">Обучение</div>
+                <div class="category-count">20+ материалов</div>
+            </div>
+        </div>
+
+        <!-- Секция: Чат-боты -->
+        <section class="section" id="chat">
+            <div class="section-header">
+                <h2>💬 Чат-боты и ассистенты</h2>
+                <a href="#" class="section-link"></a>
+            </div>
+            
+            <div class="resources-grid">
+                <!-- ChatGPT -->
+                <!-- ChatGPT -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">ChatGPT</div>
+    <div class="resource-desc">Передовая языковая модель от OpenAI. Работа с текстом, кодом, аналитика, создание контента. Поддерживает GPT-4, файлы, изображения.</div>
+    <div class="resource-tags">
+        <span class="tag">OpenAI</span>
+        <span class="tag">GPT-4</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://chat.openai.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Claude -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Claude 3.5</div>
+    <div class="resource-desc">Ассистент от Anthropic с контекстом до 200K токенов. Идеален для анализа больших документов, PDF, безопасный и надежный.</div>
+    <div class="resource-tags">
+        <span class="tag">Anthropic</span>
+        <span class="tag">200K контекст</span>
+        <span class="tag">Документы</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://claude.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- YandexGPT -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">YandexGPT</div>
+    <div class="resource-desc">Нейросеть Яндекса с глубоким пониманием русского языка. Интеграция с сервисами Яндекса, Алиса, бизнес-задачи.</div>
+    <div class="resource-tags">
+        <span class="tag">Yandex</span>
+        <span class="tag">Русский</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://yandex.ru/pro/alice" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- DeepSeek -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">DeepSeek</div>
+    <div class="resource-desc">Китайская нейросеть с фокусом на программирование, математику и логику. Бесплатный доступ, сильные технические навыки.</div>
+    <div class="resource-tags">
+        <span class="tag">Китай</span>
+        <span class="tag">Код</span>
+        <span class="tag">Математика</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://www.deepseek.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Gemini -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Gemini</div>
+    <div class="resource-desc">Мультимодальная модель от Google. Работает с текстом, изображениями, видео, аудио. Интеграция с Google Workspace.</div>
+    <div class="resource-tags">
+        <span class="tag">Google</span>
+        <span class="tag">Мультимодальный</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://gemini.google.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Perplexity -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Perplexity AI</div>
+    <div class="resource-desc">AI-поисковик с актуальными ссылками и проверенными источниками. Ответы с цитатами, поиск в реальном времени.</div>
+    <div class="resource-tags">
+        <span class="tag">Поиск</span>
+        <span class="tag">Источники</span>
+        <span class="tag">Актуально</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://www.perplexity.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Mistral -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Mistral AI</div>
+    <div class="resource-desc">Эффективная open-source модель с фокусом на производительность. Быстрая, легкая, качественная.</div>
+    <div class="resource-tags">
+        <span class="tag">Open Source</span>
+        <span class="tag">Быстрый</span>
+        <span class="tag">API</span>
+        <span class="tag">Le Chat</span>
+    </div>
+    <a href="https://mistral.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- GigaChat -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">GigaChat</div>
+    <div class="resource-desc">Нейросеть Сбера для бизнеса и образования. Мультимодальная, понимает русский, генерация изображений.</div>
+    <div class="resource-tags">
+        <span class="tag">Sber</span>
+        <span class="tag">Русский</span>
+        <span class="tag">Мультимодальный</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://developers.sber.ru/gigachat" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Character.ai -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Character.ai</div>
+    <div class="resource-desc">Общение с персонажами (исторические личности, вымышленные герои, помощники). Креатив и развлечение.</div>
+    <div class="resource-tags">
+        <span class="tag">Развлечение</span>
+        <span class="tag">Персонажи</span>
+        <span class="tag">Креатив</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://character.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Pi AI -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Pi AI</div>
+    <div class="resource-desc">Дружелюбный ассистент с эмоциональным интеллектом. Поддержка, советы, общение.</div>
+    <div class="resource-tags">
+        <span class="tag">Эмоции</span>
+        <span class="tag">Поддержка</span>
+        <span class="tag">Дружелюбный</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://pi.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- You.com -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">You.com</div>
+    <div class="resource-desc">Поисковик с AI-функциями. Разные режимы (точный, креативный), генерация кода, изображений.</div>
+    <div class="resource-tags">
+        <span class="tag">Поиск</span>
+        <span class="tag">Мультирежимы</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://you.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Poe -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Poe</div>
+    <div class="resource-desc">Платформа от Quora с доступом к разным моделям: ChatGPT, Claude, Gemini и другие в одном месте.</div>
+    <div class="resource-tags">
+        <span class="tag">Агрегатор</span>
+        <span class="tag">Мультимодели</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">Quora</span>
+    </div>
+    <a href="https://poe.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Cohere -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Cohere</div>
+    <div class="resource-desc">Платформа для бизнеса: генерация, классификация, поиск. Мощные API для разработчиков.</div>
+    <div class="resource-tags">
+        <span class="tag">Бизнес</span>
+        <span class="tag">API</span>
+        <span class="tag">Enterprise</span>
+        <span class="tag">Поиск</span>
+    </div>
+    <a href="https://cohere.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Grok -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Grok</div>
+    <div class="resource-desc">AI-ассистент от xAI (Илон Маск). Доступ в X (Twitter), актуальные данные, остроумный стиль.</div>
+    <div class="resource-tags">
+        <span class="tag">xAI</span>
+        <span class="tag">Twitter/X</span>
+        <span class="tag">Актуально</span>
+        <span class="tag">Premium</span>
+    </div>
+    <a href="https://x.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Qwen -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Qwen</div>
+    <div class="resource-desc">Мощная китайская модель от Alibaba. Поддержка нескольких языков, код, математика.</div>
+    <div class="resource-tags">
+        <span class="tag">Alibaba</span>
+        <span class="tag">Китай</span>
+        <span class="tag">Мультиязычный</span>
+        <span class="tag">Open Source</span>
+    </div>
+    <a href="https://tongyi.aliyun.com" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Kimi Chat -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Kimi Chat</div>
+    <div class="resource-desc">Китайский ассистент с огромным контекстом (до 1M токенов). Анализ больших документов.</div>
+    <div class="resource-tags">
+        <span class="tag">Китай</span>
+        <span class="tag">1M контекст</span>
+        <span class="tag">Документы</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://kimi.moonshot.cn" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- HuggingChat -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">HuggingChat</div>
+    <div class="resource-desc">Бесплатный open-source чат-бот от Hugging Face. Разные модели, сообщество.</div>
+    <div class="resource-tags">
+        <span class="tag">Open Source</span>
+        <span class="tag">Hugging Face</span>
+        <span class="tag">Бесплатно</span>
+        <span class="tag">Сообщество</span>
+    </div>
+    <a href="https://huggingface.co/chat" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- ChatGLM -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">ChatGLM</div>
+    <div class="resource-desc">Китайская двуязычная модель (китайский/английский). Хороша для технических задач.</div>
+    <div class="resource-tags">
+        <span class="tag">Китай</span>
+        <span class="tag">Двуязычный</span>
+        <span class="tag">Open Source</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://chatglm.cn" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Inflection Pi -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Inflection Pi</div>
+    <div class="resource-desc">Эмпатичный AI-помощник для личного общения и поддержки. Теплый и понимающий.</div>
+    <div class="resource-tags">
+        <span class="tag">Эмпатия</span>
+        <span class="tag">Поддержка</span>
+        <span class="tag">Личный</span>
+        <span class="tag">Бесплатно</span>
+    </div>
+    <a href="https://inflection.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+
+<!-- Reka -->
+<div class="resource-card" data-category="chat">
+    <div class="resource-name">Reka</div>
+    <div class="resource-desc">Мультимодальный AI-ассистент. Понимает текст, изображения, видео. Современная архитектура.</div>
+    <div class="resource-tags">
+        <span class="tag">Мультимодальный</span>
+        <span class="tag">Стартап</span>
+        <span class="tag">Видео</span>
+        <span class="tag">API</span>
+    </div>
+    <a href="https://reka.ai" class="resource-link" target="_blank">Перейти</a>
+</div>
+            </div>
+        </section>
+
+        <!-- Секция: Генерация изображений -->
+        <section class="section" id="image">
+            <div class="section-header">
+                <h2>🎨 Генерация изображений</h2>
+                <a href="#" class="section-link">Все 8 →</a>
+            </div>
+            <div class="resources-grid">
+                            <!-- Midjourney -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Midjourney</div>
+                    <div class="resource-desc">Лучший генератор художественных изображений. Высокое качество, уникальный стиль, работа через Discord.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Платно</span>
+                        <span class="tag">Арт</span>
+                        <span class="tag">Discord</span>
+                        <span class="tag">Лучшее качество</span>
+                    </div>
+                    <a href="https://www.midjourney.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- DALL-E 3 -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">DALL-E 3</div>
+                    <div class="resource-desc">Генератор от OpenAI с высокой точностью выполнения промптов. Интегрирован с ChatGPT Plus.</div>
+                    <div class="resource-tags">
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">Точность</span>
+                        <span class="tag">Подписка</span>
+                        <span class="tag">ChatGPT</span>
+                    </div>
+                    <a href="https://openai.com/dall-e-3" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Stable Diffusion -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Stable Diffusion</div>
+                    <div class="resource-desc">Open-source модель. Можно установить локально, множество версий, полный контроль.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Локально</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Stability AI</span>
+                    </div>
+                    <a href="https://stability.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Kandinsky 3.0 -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Kandinsky 3.0</div>
+                    <div class="resource-desc">Нейросеть Сбера. Бесплатно, отличное понимание русского, современные стили.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Sber</span>
+                        <span class="tag">Русский</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Высокое качество</span>
+                    </div>
+                    <a href="https://www.sberbank.com/promo/kandinsky/" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Leonardo AI -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Leonardo AI</div>
+                    <div class="resource-desc">Платформа с множеством стилей и моделей. Бесплатные генерации, аниме, реализм, игры.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Стили</span>
+                        <span class="tag">Игры</span>
+                        <span class="tag">Аниме</span>
+                    </div>
+                    <a href="https://leonardo.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Ideogram -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Ideogram</div>
+                    <div class="resource-desc">Специализация на типографике и тексте в изображениях. Лучший для логотипов и постеров.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Текст</span>
+                        <span class="tag">Типографика</span>
+                        <span class="tag">Логотипы</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://ideogram.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Adobe Firefly -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Adobe Firefly</div>
+                    <div class="resource-desc">Генератор от Adobe. Интеграция с Photoshop, безопасный для коммерции, отличный стиль.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Adobe</span>
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">Коммерция</span>
+                        <span class="tag">Дизайн</span>
+                    </div>
+                    <a href="https://www.adobe.com/products/firefly.html" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Playground AI -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Playground AI</div>
+                    <div class="resource-desc">Визуальный редактор с генерацией. Масса стилей, удобный интерфейс, бесплатные генерации.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Редактор</span>
+                        <span class="tag">Стили</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Интерфейс</span>
+                    </div>
+                    <a href="https://playgroundai.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Craiyon -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Craiyon</div>
+                    <div class="resource-desc">Бесплатный генератор (бывший DALL-E mini). Быстро, просто, без регистрации.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Быстро</span>
+                        <span class="tag">Просто</span>
+                        <span class="tag">Без регистрации</span>
+                    </div>
+                    <a href="https://www.craiyon.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Imagen -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Imagen</div>
+                    <div class="resource-desc">Генератор изображений от Google. Фотореализм, точность, интеграция с Google Cloud.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Google</span>
+                        <span class="tag">Фотореализм</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <a href="https://imagen.research.google" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- NightCafe -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">NightCafe</div>
+                    <div class="resource-desc">Креативная платформа с разными алгоритмами. Сообщество, конкурсы, множество стилей.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Сообщество</span>
+                        <span class="tag">Креатив</span>
+                        <span class="tag">Алгоритмы</span>
+                        <span class="tag">Платно</span>
+                    </div>
+                    <a href="https://nightcafe.studio" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Artbreeder -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Artbreeder</div>
+                    <div class="resource-desc">Генерация и смешивание изображений. Создание персонажей, портретов, ландшафтов.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Смешивание</span>
+                        <span class="tag">Персонажи</span>
+                        <span class="tag">Портреты</span>
+                        <span class="tag">Генетика</span>
+                    </div>
+                    <a href="https://www.artbreeder.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Wombo Dream -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Wombo Dream</div>
+                    <div class="resource-desc">Мобильное приложение для генерации. Быстро, красиво, просто, много стилей.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Мобильное</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Быстро</span>
+                        <span class="tag">Стили</span>
+                    </div>
+                    <a href="https://dream.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Pixray -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Pixray</div>
+                    <div class="resource-desc">Open-source генератор с гибкими настройками. Для разработчиков и энтузиастов.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Гибкий</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Dev</span>
+                    </div>
+                    <a href="https://pixray.gob.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Mage.space -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Mage.space</div>
+                    <div class="resource-desc">Бесплатный генератор на основе Stable Diffusion. Разные модели, быстрая генерация.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Stable Diffusion</span>
+                        <span class="tag">Быстро</span>
+                        <span class="tag">Модели</span>
+                    </div>
+                    <a href="https://www.mage.space" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- SeaArt -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">SeaArt</div>
+                    <div class="resource-desc">Китайский генератор с мощными возможностями. Бесплатно, хорошее качество.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Китай</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Качество</span>
+                        <span class="tag">Модели</span>
+                    </div>
+                    <a href="https://www.seaart.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Tensor.art -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Tensor.art</div>
+                    <div class="resource-desc">Платформа с множеством моделей Stable Diffusion. Удобный интерфейс, бесплатно.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Stable Diffusion</span>
+                        <span class="tag">Модели</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">UI</span>
+                    </div>
+                    <a href="https://tensor.art" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Clipdrop -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Clipdrop</div>
+                    <div class="resource-desc">Инструменты для редактирования: удаление фона, upscale, reimagine от Stability AI.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Редактирование</span>
+                        <span class="tag">Удаление фона</span>
+                        <span class="tag">Stability AI</span>
+                        <span class="tag">Инструменты</span>
+                    </div>
+                    <a href="https://clipdrop.co" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Getimg.ai -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Getimg.ai</div>
+                    <div class="resource-desc">Набор AI-инструментов: генерация, редактирование, upscale, бесконечный холст.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Инструменты</span>
+                        <span class="tag">Редактор</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Upscale</span>
+                    </div>
+                    <a href="https://getimg.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Lexica -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Lexica</div>
+                    <div class="resource-desc">Поисковик по сгенерированным изображениям и генератор. База промптов, примеры.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Поиск</span>
+                        <span class="tag">База промптов</span>
+                        <span class="tag">Примеры</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://lexica.art" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- PromptBase -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">PromptBase</div>
+                    <div class="resource-desc">Маркетплейс промптов для Midjourney, DALL-E, ChatGPT. Покупка/продажа промптов.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Промпты</span>
+                        <span class="tag">Маркетплейс</span>
+                        <span class="tag">База</span>
+                        <span class="tag">Платно</span>
+                    </div>
+                    <a href="https://promptbase.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- BlueWillow -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">BlueWillow</div>
+                    <div class="resource-desc">Бесплатная альтернатива Midjourney в Discord. Активное сообщество.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Discord</span>
+                        <span class="tag">Альтернатива</span>
+                        <span class="tag">Сообщество</span>
+                    </div>
+                    <a href="https://www.bluewillow.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Playground v2 -->
+                <div class="resource-card" data-category="image">
+                    <div class="resource-name">Playground v2</div>
+                    <div class="resource-desc">Новая версия от Playground. Фотореализм, высокое качество, бесплатно.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Фотореализм</span>
+                        <span class="tag">Высокое качество</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Новая версия</span>
+                    </div>
+                    <a href="https://playground.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Видео и аудио -->
+        <section class="section" id="video">
+            <div class="section-header">
+                <h2>🎥 Видео и аудио</h2>
+                <a href="#" class="section-link"></a>
+            </div>
+            
+            <div class="resources-grid">
+                                <!-- Runway ML -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Runway ML</div>
+                    <div class="resource-desc">Профессиональные инструменты для генерации и редактирования видео. Gen-2, удаление объектов, фон.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Видео</span>
+                        <span class="tag">Gen-2</span>
+                        <span class="tag">Профессионально</span>
+                        <span class="tag">Редактор</span>
+                    </div>
+                    <a href="https://runwayml.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Suno AI -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Suno AI</div>
+                    <div class="resource-desc">Генерация музыки и песен по текстовому описанию. Вокал, инструменты, разные жанры.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Музыка</span>
+                        <span class="tag">Аудио</span>
+                        <span class="tag">Креатив</span>
+                        <span class="tag">Песни</span>
+                    </div>
+                    <a href="https://suno.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- ElevenLabs -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">ElevenLabs</div>
+                    <div class="resource-desc">Реалистичный синтез речи с эмоциями. Озвучка видео, аудиокниги, голосовые клоны.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Голос</span>
+                        <span class="tag">Озвучка</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Реализм</span>
+                    </div>
+                    <a href="https://elevenlabs.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- HeyGen -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">HeyGen</div>
+                    <div class="resource-desc">Создание видео с AI-аватарами. Для бизнеса, маркетинга, обучения.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Аватары</span>
+                        <span class="tag">Видео</span>
+                        <span class="tag">Бизнес</span>
+                        <span class="tag">Презентации</span>
+                    </div>
+                    <a href="https://www.heygen.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Pika -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Pika</div>
+                    <div class="resource-desc">Генерация видео из текста и изображений. Креативные эффекты, анимация.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Видео</span>
+                        <span class="tag">Анимация</span>
+                        <span class="tag">Текст в видео</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://pika.art" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- CapCut -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">CapCut</div>
+                    <div class="resource-desc">Видеоредактор с AI-функциями. Автосубтитры, удаление фона, эффекты.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Редактор</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Субтитры</span>
+                        <span class="tag">Мобильный</span>
+                    </div>
+                    <a href="https://www.capcut.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Rask.ai -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Rask.ai</div>
+                    <div class="resource-desc">Локализация видео с сохранением голоса. Перевод, дубляж, синхронизация губ.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Локализация</span>
+                        <span class="tag">Дубляж</span>
+                        <span class="tag">Перевод</span>
+                        <span class="tag">Видео</span>
+                    </div>
+                    <a href="https://www.rask.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Descript -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Descript</div>
+                    <div class="resource-desc">Редактор видео и аудио через текст. Overdub, удаление слов, транскрипция.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Редактор</span>
+                        <span class="tag">Транскрипция</span>
+                        <span class="tag">Подкасты</span>
+                        <span class="tag">Overdub</span>
+                    </div>
+                    <a href="https://www.descript.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Murf AI -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Murf AI</div>
+                    <div class="resource-desc">Генератор голоса для видео и презентаций. Реалистичные голоса, эмоции.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Голос</span>
+                        <span class="tag">Озвучка</span>
+                        <span class="tag">Презентации</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <a href="https://murf.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- WellSaid -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">WellSaid</div>
+                    <div class="resource-desc">Профессиональная озвучка текста. Реалистичные голоса, для бизнеса.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Голос</span>
+                        <span class="tag">Озвучка</span>
+                        <span class="tag">Профессионально</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <a href="https://wellsaidlabs.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Synthesia -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Synthesia</div>
+                    <div class="resource-desc">Создание видео с AI-аватарами для бизнеса. 60+ языков, шаблоны.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Аватары</span>
+                        <span class="tag">Видео</span>
+                        <span class="tag">Бизнес</span>
+                        <span class="tag">Шаблоны</span>
+                    </div>
+                    <a href="https://www.synthesia.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Pictory -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Pictory</div>
+                    <div class="resource-desc">Создание коротких видео из длинных. Автоматическая нарезка, субтитры.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Видео</span>
+                        <span class="tag">Нарезка</span>
+                        <span class="tag">Субтитры</span>
+                        <span class="tag">Контент</span>
+                    </div>
+                    <a href="https://pictory.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- InVideo -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">InVideo</div>
+                    <div class="resource-desc">Создание видео из текста. Шаблоны, AI-сценарии, маркетинг.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Видео</span>
+                        <span class="tag">Шаблоны</span>
+                        <span class="tag">Маркетинг</span>
+                        <span class="tag">Текст в видео</span>
+                    </div>
+                    <a href="https://invideo.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Fliki -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Fliki</div>
+                    <div class="resource-desc">Текст в видео с озвучкой. Блог в видео за минуту, соцсети.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Текст в видео</span>
+                        <span class="tag">Озвучка</span>
+                        <span class="tag">Блог</span>
+                        <span class="tag">Соцсети</span>
+                    </div>
+                    <a href="https://fliki.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Lovo AI -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Lovo AI</div>
+                    <div class="resource-desc">Генератор голоса и видео. Реалистичные голоса, аватары, озвучка.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Голос</span>
+                        <span class="tag">Аватары</span>
+                        <span class="tag">Озвучка</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <a href="https://lovo.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- AIVA -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">AIVA</div>
+                    <div class="resource-desc">Генерация классической музыки для видео, игр, проектов.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Музыка</span>
+                        <span class="tag">Классика</span>
+                        <span class="tag">Фоновая музыка</span>
+                        <span class="tag">Композитор</span>
+                    </div>
+                    <a href="https://www.aiva.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Mubert -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Mubert</div>
+                    <div class="resource-desc">Генерация электронной музыки в реальном времени. Для стримов, видео.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Музыка</span>
+                        <span class="tag">Электронная</span>
+                        <span class="tag">Стримы</span>
+                        <span class="tag">Фон</span>
+                    </div>
+                    <a href="https://mubert.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Boomy -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Boomy</div>
+                    <div class="resource-desc">Создание музыки за секунды. Разные жанры, монетизация.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Музыка</span>
+                        <span class="tag">Быстро</span>
+                        <span class="tag">Монетизация</span>
+                        <span class="tag">Жанры</span>
+                    </div>
+                    <a href="https://boomy.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Soundraw -->
+                <div class="resource-card" data-category="video">
+                    <div class="resource-name">Soundraw</div>
+                    <div class="resource-desc">AI-композитор музыки. Кастомизация, роялти-фри для видео.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Музыка</span>
+                        <span class="tag">Роялти-фри</span>
+                        <span class="tag">Кастомизация</span>
+                        <span class="tag">Видео</span>
+                    </div>
+                    <a href="https://soundraw.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Обучение -->
+
+        <section class="section" id="dev">
+            <div class="section-header">
+                <h2> ИНСТРУМЕНТЫ ДЛЯ РАЗРАБОТЧИКОВ</h2>
+                <a href="#" class="section-link">Все 15 →</a>
+            </div>
+
+            <div class="resources-grid">
+            <!-- GitHub Copilot -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">GitHub Copilot</div>
+                    <div class="resource-desc">AI-помощник для программистов. Автодополнение кода, объяснение, рефакторинг.</div>
+                    <div class="resource-tags">
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Код</span>
+                        <span class="tag">IDE</span>
+                        <span class="tag">Платно</span>
+                    </div>
+                    <a href="https://github.com/features/copilot" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Cursor -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Cursor</div>
+                    <div class="resource-desc">Редактор кода с AI. Встроенный чат, генерация, рефакторинг, понимание проекта.</div>
+                    <div class="resource-tags">
+                        <span class="tag">IDE</span>
+                        <span class="tag">Код</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">AI-first</span>
+                    </div>
+                    <a href="https://cursor.sh" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Replit -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Replit</div>
+                    <div class="resource-desc">Онлайн IDE с AI-функциями. Совместное программирование, хостинг.</div>
+                    <div class="resource-tags">
+                        <span class="tag">IDE</span>
+                        <span class="tag">Онлайн</span>
+                        <span class="tag">Совместное</span>
+                        <span class="tag">Хостинг</span>
+                    </div>
+                    <a href="https://replit.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Codeium -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Codeium</div>
+                    <div class="resource-desc">Бесплатная альтернатива Copilot. Автодополнение, чат, поиск.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Код</span>
+                        <span class="tag">Альтернатива</span>
+                        <span class="tag">IDE</span>
+                    </div>
+                    <a href="https://codeium.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Tabnine -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Tabnine</div>
+                    <div class="resource-desc">AI-автодополнение кода. Локальная работа, приватность, много языков.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Код</span>
+                        <span class="tag">Приватность</span>
+                        <span class="tag">Локально</span>
+                        <span class="tag">IDE</span>
+                    </div>
+                    <a href="https://www.tabnine.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Sourcegraph Cody -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Sourcegraph Cody</div>
+                    <div class="resource-desc">AI-ассистент для кода. Понимает всю кодовую базу, объяснение, рефакторинг.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Код</span>
+                        <span class="tag">Sourcegraph</span>
+                        <span class="tag">База кода</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://sourcegraph.com/cody" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Continue -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Continue</div>
+                    <div class="resource-desc">Open-source AI-ассистент для VS Code. Локальный, гибкий, бесплатный.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Локальный</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://continue.dev" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Phind -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Phind</div>
+                    <div class="resource-desc">Поисковик для разработчиков. Ответы на технические вопросы с кодом.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Поиск</span>
+                        <span class="tag">Технический</span>
+                        <span class="tag">Код</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://www.phind.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- v0.dev -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">v0.dev</div>
+                    <div class="resource-desc">Генерация React-компонентов из текста. От Vercel, для фронтенда.</div>
+                    <div class="resource-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">UI</span>
+                        <span class="tag">Компоненты</span>
+                    </div>
+                    <a href="https://v0.dev" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Claude Engineering -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Claude Engineering</div>
+                    <div class="resource-desc">Специализированная версия Claude для программирования. Анализ кода, архитектура.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Код</span>
+                        <span class="tag">Anthropic</span>
+                        <span class="tag">Архитектура</span>
+                        <span class="tag">Анализ</span>
+                    </div>
+                    <a href="https://claude.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- MutableAI -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">MutableAI</div>
+                    <div class="resource-desc">AI для ускорения разработки. Генерация, рефакторинг, документация.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Код</span>
+                        <span class="tag">Рефакторинг</span>
+                        <span class="tag">Документация</span>
+                        <span class="tag">IDE</span>
+                    </div>
+                    <a href="https://mutable.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Bito -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Bito</div>
+                    <div class="resource-desc">AI-ассистент в IDE. Объяснение кода, генерация тестов, оптимизация.</div>
+                    <div class="resource-tags">
+                        <span class="tag">IDE</span>
+                        <span class="tag">Тесты</span>
+                        <span class="tag">Оптимизация</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://bito.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- What The Diff -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">What The Diff</div>
+                    <div class="resource-desc">AI для code review. Объяснение изменений, описание PR.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Code Review</span>
+                        <span class="tag">PR</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Команда</span>
+                    </div>
+                    <a href="https://whatthediff.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- CodiumAI -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">CodiumAI</div>
+                    <div class="resource-desc">Автоматическая генерация тестов для кода. Повышение покрытия, качество.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Тесты</span>
+                        <span class="tag">Качество</span>
+                        <span class="tag">Покрытие</span>
+                        <span class="tag">Автоматизация</span>
+                    </div>
+                    <a href="https://www.codium.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Codiga -->
+                <div class="resource-card" data-category="dev">
+                    <div class="resource-name">Codiga</div>
+                    <div class="resource-desc">Анализ кода в реальном времени. Безопасность, качество, best practices.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Анализ</span>
+                        <span class="tag">Безопасность</span>
+                        <span class="tag">Качество</span>
+                        <span class="tag">IDE</span>
+                    </div>
+                    <a href="https://www.codiga.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+        </section>
+
+
+        <section class="section" id="materials">
+            <div class="section-header">
+                <h2>📚 Обучение и материалы</h2>
+                <a href="#" class="section-link">Все 15 →</a>
+            </div>
+            
+            <div class="resources-grid">
+                <!-- База промптов для ChatGPT -->
+
+                <!-- База промптов для ChatGPT -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">База промптов ChatGPT</div>
+                    <div class="resource-desc">Коллекция профессиональных промптов для разных задач: копирайтинг, маркетинг, разработка.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Промпты</span>
+                        <span class="tag">ChatGPT</span>
+                        <span class="tag">База</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://habr.com/ru/articles/834054/" class="resource-link" target="_blank">Изучить</a>
+                </div>
+
+                <!-- Курс AI для начинающих -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">AI для начинающих</div>
+                    <div class="resource-desc">Бесплатный курс по использованию нейросетей в повседневной жизни и работе.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курс</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Для новичков</span>
+                        <span class="tag">Обучение</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Начать</a>
+                </div>
+
+                <!-- Библиотека AI -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Библиотека книг об AI</div>
+                    <div class="resource-desc">Лучшие книги по искусственному интеллекту, машинному обучению и Data Science.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Книги</span>
+                        <span class="tag">Теория</span>
+                        <span class="tag">Обучение</span>
+                        <span class="tag">Подборка</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Смотреть</a>
+                </div>
+
+                <!-- Технические гайды -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Технические гайды по API</div>
+                    <div class="resource-desc">Документация и руководства по работе с API нейросетей: OpenAI, Anthropic, Google.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Гайды</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Разработка</span>
+                        <span class="tag">Документация</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Читать</a>
+                </div>
+
+                <!-- Новости AI -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Еженедельный дайджест AI</div>
+                    <div class="resource-desc">Главные новости из мира искусственного интеллекта за неделю в одном месте.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Новости</span>
+                        <span class="tag">Дайджест</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Подписка</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Подписаться</a>
+                </div>
+
+                <!-- AI Сообщество -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">AI Сообщество</div>
+                    <div class="resource-desc">Форум и Telegram-чат для профессионалов, работающих с нейросетями.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Форум</span>
+                        <span class="tag">Чат</span>
+                        <span class="tag">Комьюнити</span>
+                        <span class="tag">Telegram</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Присоединиться</a>
+                </div>
+
+                <!-- Prompt Engineering Guide -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Prompt Engineering Guide</div>
+                    <div class="resource-desc">Полное руководство по инженерии промптов для всех нейросетей.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Промпты</span>
+                        <span class="tag">Гайд</span>
+                        <span class="tag">Инженерия</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Изучить</a>
+                </div>
+
+                <!-- AI Tools Directory -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">AI Tools Directory</div>
+                    <div class="resource-desc">Большой каталог всех AI-инструментов по категориям.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Каталог</span>
+                        <span class="tag">Список</span>
+                        <span class="tag">Инструменты</span>
+                        <span class="tag">Поиск</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Открыть</a>
+                </div>
+
+                <!-- Futurepedia -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Futurepedia</div>
+                    <div class="resource-desc">Крупнейшая база AI-инструментов с отзывами и рейтингами.</div>
+                    <div class="resource-tags">
+                        <span class="tag">База</span>
+                        <span class="tag">Отзывы</span>
+                        <span class="tag">Рейтинг</span>
+                        <span class="tag">Поиск</span>
+                    </div>
+                    <a href="https://www.futurepedia.io" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- There's An AI For That -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">There's An AI For That</div>
+                    <div class="resource-desc">Поисковик AI-инструментов по задачам. Найдет AI для чего угодно.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Поиск</span>
+                        <span class="tag">База</span>
+                        <span class="tag">Каталог</span>
+                        <span class="tag">Задачи</span>
+                    </div>
+                    <a href="https://theresanaiforthat.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Learn Prompting -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Learn Prompting</div>
+                    <div class="resource-desc">Бесплатный курс по промпт-инженерии на разных языках.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курс</span>
+                        <span class="tag">Промпты</span>
+                        <span class="tag">Бесплатно</span>
+                        <span class="tag">Инженерия</span>
+                    </div>
+                    <a href="https://learnprompting.org" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- DeepLearning.AI -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">DeepLearning.AI</div>
+                    <div class="resource-desc">Курсы от Эндрю Ына по машинному обучению и AI.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курсы</span>
+                        <span class="tag">Эндрю Ын</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">Обучение</span>
+                    </div>
+                    <a href="https://www.deeplearning.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Coursera AI -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Coursera AI</div>
+                    <div class="resource-desc">Подборка лучших курсов по AI от университетов мира.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курсы</span>
+                        <span class="tag">Университеты</span>
+                        <span class="tag">Сертификаты</span>
+                        <span class="tag">Платно</span>
+                    </div>
+                    <a href="https://www.coursera.org/browse/data-science" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Fast.ai -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Fast.ai</div>
+                    <div class="resource-desc">Бесплатные практические курсы по глубокому обучению.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курсы</span>
+                        <span class="tag">Глубокое обучение</span>
+                        <span class="tag">Практика</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://www.fast.ai" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Kaggle -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Kaggle</div>
+                    <div class="resource-desc">Платформа для соревнований по ML, датасеты, курсы, сообщество.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Соревнования</span>
+                        <span class="tag">Датасеты</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">Сообщество</span>
+                    </div>
+                    <a href="https://www.kaggle.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Hugging Face Models -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Hugging Face Models</div>
+                    <div class="resource-desc">База open-source моделей, датасетов и демо.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Модели</span>
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Датасеты</span>
+                        <span class="tag">Сообщество</span>
+                    </div>
+                    <a href="https://huggingface.co/models" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Papers with Code -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Papers with Code</div>
+                    <div class="resource-desc">Научные статьи по ML с кодом и реализациями.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Статьи</span>
+                        <span class="tag">Код</span>
+                        <span class="tag">Исследования</span>
+                        <span class="tag">ML</span>
+                    </div>
+                    <a href="https://paperswithcode.com" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- ArXiv.org -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">ArXiv.org</div>
+                    <div class="resource-desc">Все свежие научные статьи по AI и ML.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Статьи</span>
+                        <span class="tag">Наука</span>
+                        <span class="tag">Исследования</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="https://arxiv.org" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- Reddit r/MachineLearning -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">Reddit r/MachineLearning</div>
+                    <div class="resource-desc">Крупнейшее сообщество по ML на Reddit.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Reddit</span>
+                        <span class="tag">Сообщество</span>
+                        <span class="tag">Обсуждения</span>
+                        <span class="tag">Новости</span>
+                    </div>
+                    <a href="https://www.reddit.com/r/MachineLearning/" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- LinkedIn Learning AI -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">LinkedIn Learning AI</div>
+                    <div class="resource-desc">Профессиональные курсы по AI для карьерного роста.</div>
+                    <div class="resource-tags">
+                        <span class="tag">Курсы</span>
+                        <span class="tag">LinkedIn</span>
+                        <span class="tag">Карьера</span>
+                        <span class="tag">Сертификаты</span>
+                    </div>
+                    <a href="https://www.linkedin.com/learning/topics/artificial-intelligence" class="resource-link" target="_blank">Перейти</a>
+                </div>
+
+                <!-- YouTube AI Channels -->
+                <div class="resource-card" data-category="materials">
+                    <div class="resource-name">YouTube AI-каналы</div>
+                    <div class="resource-desc">Подборка лучших YouTube-каналов про AI: Two Minute Papers, Yannic Kilcher и др.</div>
+                    <div class="resource-tags">
+                        <span class="tag">YouTube</span>
+                        <span class="tag">Видео</span>
+                        <span class="tag">Обучение</span>
+                        <span class="tag">Бесплатно</span>
+                    </div>
+                    <a href="#" class="resource-link" target="_blank">Смотреть</a>
+                </div>
+
+            </div>
+        </section>
+
+
+            </div>
+        </section>
+
+        <!-- Популярные запросы -->
+        <div class="popular-section">
+            <h3>Часто ищут</h3>
+            <div class="query-tags">
+                <span class="query-tag" onclick="searchQuery('ChatGPT API')">ChatGPT API</span>
+                <span class="query-tag" onclick="searchQuery('Midjourney альтернатива')">Midjourney альтернатива</span>
+                <span class="query-tag" onclick="searchQuery('нейросеть для видео')">нейросеть для видео</span>
+                <span class="query-tag" onclick="searchQuery('промпты для дизайна')">промпты для дизайна</span>
+                <span class="query-tag" onclick="searchQuery('генератор презентаций')">генератор презентаций</span>
+                <span class="query-tag" onclick="searchQuery('русские нейросети')">русские нейросети</span>
+                <span class="query-tag" onclick="searchQuery('AI для кода')">AI для кода</span>
+                <span class="query-tag" onclick="searchQuery('озвучка текста')">озвучка текста</span>
+                <span class="query-tag" onclick="searchQuery('Stable Diffusion локально')">Stable Diffusion локально</span>
+                <span class="query-tag" onclick="searchQuery('бесплатный GPT')">бесплатный GPT</span>
+            </div>
+        </div>
+
+       
+
+
+
+
+        <!-- ===== ПОСЛЕДНИЕ ОБНОВЛЕНИЯ ===== -->
+        
+
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div>© 2025 AI Navigator — профессиональный каталог нейросетей</div>
+            <div class="footer-links">
+                <a href="#">О проекте</a>
+                <a href="#">Добавить ресурс</a>
+                <a href="#">Контакты</a>
+                <a href="#">Telegram</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function searchResources() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const cards = document.getElementsByClassName('resource-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                const name = card.getElementsByClassName('resource-name')[0];
+                const desc = card.getElementsByClassName('resource-desc')[0];
+                
+                if (name || desc) {
+                    const nameValue = name.textContent || name.innerText;
+                    const descValue = desc.textContent || desc.innerText;
+                    
+                    if (nameValue.toUpperCase().indexOf(filter) > -1 || descValue.toUpperCase().indexOf(filter) > -1) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function filterCategory(category) {
+            const section = document.getElementById(category);
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            const cards = document.querySelectorAll(`.resource-card[data-category="${category}"]`);
+            cards.forEach(card => {
+                card.style.backgroundColor = 'var(--bg-tertiary)';
+                card.style.borderColor = 'var(--accent)';
+                
+                setTimeout(() => {
+                    card.style.backgroundColor = '';
+                    card.style.borderColor = '';
+                }, 1000);
+            });
+        }
+
+        function searchQuery(query) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = query;
+            searchResources();
+        }
+
+
+        // ===== ФУНКЦИИ ДЛЯ ПАНЕЛИ УПРАВЛЕНИЯ =====
+
+// Плавный скролл к секциям
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        const offset = 80; // Высота панели
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+        
+        // Обновляем активный пункт меню
+        updateActiveNavLink(target.substring(1));
+    }
+}
+
+// Обновление активного пункта меню при скролле
+function updateActiveNavLink(sectionId) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Отслеживание скролла для подсветки активного раздела
+function handleScroll() {
+    const sections = ['chat', 'image', 'video', 'dev', 'materials'];
+    const scrollPosition = window.scrollY + 100; // Смещение для учета панели
+    
+    for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+            const { top, bottom } = element.getBoundingClientRect();
+            const elementTop = top + window.scrollY;
+            const elementBottom = bottom + window.scrollY;
+            
+            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+                updateActiveNavLink(section);
+                break;
+            }
+        }
+    }
+    
+    // Эффект для панели при скролле
+    const navbar = document.querySelector('.top-navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+// Мобильное меню
+function toggleMobileMenu() {
+    const menu = document.getElementById('navbarMenu');
+    menu.classList.toggle('show');
+}
+
+// Переключение темы (темная/светлая)
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.querySelector('.theme-icon');
+    const navbar = document.querySelector('.top-navbar');
+    
+    if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        themeIcon.textContent = '🌙';
+        navbar.style.background = 'rgba(10, 12, 16, 0.85)';
+    } else {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.textContent = '☀️';
+        navbar.style.background = 'rgba(255, 255, 255, 0.85)';
+    }
+}
+
+// Закрытие мобильного меню при клике вне
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('navbarMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    
+    if (window.innerWidth <= 768 && 
+        menu.classList.contains('show') && 
+        !menu.contains(event.target) && 
+        !menuToggle.contains(event.target)) {
+        menu.classList.remove('show');
+    }
+});
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    // Добавляем обработчик скролла
+    window.addEventListener('scroll', handleScroll);
+    
+    // Добавляем обработчики для кнопок
+    document.getElementById('menuToggle')?.addEventListener('click', toggleMobileMenu);
+    document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+    
+    // Закрытие меню при клике на ссылку
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                document.getElementById('navbarMenu').classList.remove('show');
+            }
+        });
+    });
+    
+    // Проверяем начальное положение
+    handleScroll();
+});
+
+
+// ===== ФУНКЦИИ ДЛЯ ФИЛЬТРОВ =====
+let activeFilters = {
+    price: null,
+    lang: null,
+    access: []
+};
+
+function filterByPrice(type) {
+    const tags = document.querySelectorAll('[onclick^="filterByPrice"]');
+    tags.forEach(tag => tag.classList.remove('active'));
+    
+    event.target.classList.add('active');
+    activeFilters.price = type;
+    applyFilters();
+    showActiveFilters();
+}
+
+function filterByLang(lang) {
+    const tags = document.querySelectorAll('[onclick^="filterByLang"]');
+    tags.forEach(tag => tag.classList.remove('active'));
+    
+    event.target.classList.add('active');
+    activeFilters.lang = lang;
+    applyFilters();
+    showActiveFilters();
+}
+
+function filterByAccess(type) {
+    const tag = event.target;
+    tag.classList.toggle('active');
+    
+    if (activeFilters.access.includes(type)) {
+        activeFilters.access = activeFilters.access.filter(t => t !== type);
+    } else {
+        activeFilters.access.push(type);
+    }
+    applyFilters();
+    showActiveFilters();
+}
+
+function applyFilters() {
+    const cards = document.querySelectorAll('.resource-card');
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        const tags = card.querySelectorAll('.tag');
+        const tagTexts = Array.from(tags).map(t => t.textContent.toLowerCase());
+        const desc = card.querySelector('.resource-desc').textContent.toLowerCase();
+        let show = true;
+        
+        // Фильтр по цене
+        if (activeFilters.price === 'free' && !tagTexts.some(t => t.includes('бесплатно'))) {
+            show = false;
+        }
+        if (activeFilters.price === 'freemium' && !tagTexts.some(t => t.includes('бесплатно') || t.includes('free'))) {
+            show = false;
+        }
+        if (activeFilters.price === 'paid' && !tagTexts.some(t => t.includes('платно') || t.includes('paid'))) {
+            show = false;
+        }
+        
+        // Фильтр по языку
+        if (activeFilters.lang === 'ru' && !tagTexts.some(t => t.includes('русский'))) {
+            show = false;
+        }
+        if (activeFilters.lang === 'en' && !tagTexts.some(t => t.includes('english') || t.includes('английский'))) {
+            show = false;
+        }
+        if (activeFilters.lang === 'multi' && !tagTexts.some(t => t.includes('мульти') || t.includes('multilingual'))) {
+            show = false;
+        }
+        
+        // Фильтр по доступу
+        if (activeFilters.access.length > 0) {
+            const hasAccess = activeFilters.access.some(access => {
+                if (access === 'api') return tagTexts.some(t => t.includes('api'));
+                if (access === 'web') return tagTexts.some(t => t.includes('web') || t.includes('веб'));
+                if (access === 'local') return tagTexts.some(t => t.includes('локально') || t.includes('local'));
+                if (access === 'mobile') return tagTexts.some(t => t.includes('mobile') || t.includes('мобильный'));
+                return false;
+            });
+            if (!hasAccess) show = false;
+        }
+        
+        card.style.display = show ? 'flex' : 'none';
+        if (show) visibleCount++;
+    });
+    
+    // Показываем сообщение, если ничего не найдено
+    const noResults = document.getElementById('noResults') || createNoResults();
+    if (visibleCount === 0) {
+        noResults.style.display = 'block';
+    } else {
+        noResults.style.display = 'none';
+    }
+}
+
+function createNoResults() {
+    const div = document.createElement('div');
+    div.id = 'noResults';
+    div.className = 'no-results';
+    div.innerHTML = `
+        <div class="no-results-content">
+            <span class="no-results-icon">🔍</span>
+            <h3>Ничего не найдено</h3>
+            <p>Попробуйте изменить фильтры или поисковый запрос</p>
+            <button onclick="clearFilters()" class="clear-filters-btn">Сбросить фильтры</button>
+        </div>
+    `;
+    document.querySelector('.resources-grid').after(div);
+    return div;
+}
+
+function showActiveFilters() {
+    const container = document.getElementById('activeFilters');
+    const tagsContainer = document.getElementById('activeFilterTags');
+    
+    const hasActive = activeFilters.price || activeFilters.lang || activeFilters.access.length > 0;
+    
+    if (hasActive) {
+        container.style.display = 'flex';
+        tagsContainer.innerHTML = '';
+        
+        if (activeFilters.price) {
+            addActiveFilterTag(tagsContainer, `💰 ${getPriceText(activeFilters.price)}`, () => {
+                document.querySelectorAll('[onclick^="filterByPrice"]').forEach(t => t.classList.remove('active'));
+                activeFilters.price = null;
+                applyFilters();
+                showActiveFilters();
+            });
+        }
+        
+        if (activeFilters.lang) {
+            addActiveFilterTag(tagsContainer, `🌍 ${getLangText(activeFilters.lang)}`, () => {
+                document.querySelectorAll('[onclick^="filterByLang"]').forEach(t => t.classList.remove('active'));
+                activeFilters.lang = null;
+                applyFilters();
+                showActiveFilters();
+            });
+        }
+        
+        activeFilters.access.forEach(access => {
+            addActiveFilterTag(tagsContainer, `🔧 ${getAccessText(access)}`, () => {
+                document.querySelectorAll('[onclick^="filterByAccess"]').forEach(t => {
+                    if (t.textContent.includes(getAccessText(access))) {
+                        t.classList.remove('active');
+                    }
+                });
+                activeFilters.access = activeFilters.access.filter(a => a !== access);
+                applyFilters();
+                showActiveFilters();
+            });
+        });
+    } else {
+        container.style.display = 'none';
+    }
+}
+
+function addActiveFilterTag(container, text, onClick) {
+    const tag = document.createElement('span');
+    tag.className = 'active-filter-tag';
+    tag.innerHTML = `${text} <span class="remove" onclick="(${onClick})()">×</span>`;
+    container.appendChild(tag);
+}
+
+function getPriceText(type) {
+    const map = { free: 'Бесплатно', freemium: 'Есть бесплатно', paid: 'Платно' };
+    return map[type];
+}
+
+function getLangText(type) {
+    const map = { ru: 'Русский', en: 'Английский', multi: 'Мультиязычный' };
+    return map[type];
+}
+
+function getAccessText(type) {
+    const map = { api: 'API', web: 'Веб-версия', local: 'Локально', mobile: 'Мобильное' };
+    return map[type];
+}
+
+function clearFilters() {
+    document.querySelectorAll('.filter-tag.active').forEach(t => t.classList.remove('active'));
+    activeFilters = { price: null, lang: null, access: [] };
+    document.getElementById('activeFilters').style.display = 'none';
+    applyFilters();
+    
+    // Сбрасываем поиск если есть
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.value = '';
+        searchResources();
+    }
+}
+
+// Добавляем стили для сообщения "ничего не найдено"
+const noResultsStyles = `
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    margin: 20px 0;
+}
+
+.no-results-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.clear-filters-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+`;
+
+// Добавляем стили в документ
+const style = document.createElement('style');
+style.textContent = noResultsStyles;
+document.head.appendChild(style);
+
+    </script>
+</body>
+</html>
